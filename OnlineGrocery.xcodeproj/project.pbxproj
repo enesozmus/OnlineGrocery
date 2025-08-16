@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DFE4FD582E5104E5005A6C0F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = DFE4FD572E5104D7005A6C0F /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DFCBEECB2E50D61A00877E54 /* OnlineGrocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineGrocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE4FD572E5104D7005A6C0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -45,6 +50,7 @@
 		DFCBEEC22E50D61A00877E54 = {
 			isa = PBXGroup;
 			children = (
+				DFE4FD572E5104D7005A6C0F /* README.md */,
 				DFCBEECD2E50D61A00877E54 /* OnlineGrocery */,
 				DFCBEECC2E50D61A00877E54 /* Products */,
 			);
@@ -132,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE4FD582E5104E5005A6C0F /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
