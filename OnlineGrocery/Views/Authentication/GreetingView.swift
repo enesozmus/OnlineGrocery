@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SignInView: View {
+struct GreetingView: View {
     @State private var txtMobile: String = ""
     
     var body: some View {
@@ -48,7 +48,7 @@ struct SignInView: View {
                     .padding(.bottom, 8)
                     
                     NavigationLink {
-                        //
+                        SignUpView()
                     } label: {
                         Text("Continue with Email Sign Up")
                             .font(.customFont(.gilroySemibold, fontSize: 18))
@@ -118,5 +118,7 @@ struct SignInView: View {
 }
 
 #Preview {
-    SignInView()
+    NavigationStack {
+        GreetingView()
+    }
 }

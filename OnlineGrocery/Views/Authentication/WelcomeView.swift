@@ -35,7 +35,7 @@ struct WelcomeView: View {
                     .padding(.bottom, 30)
                 
                 NavigationLink {
-                    SignInView()
+                    GreetingView()
                 } label: {
                     Text("Get Started")
                         .font(.customFont(.gilroySemibold, fontSize: 18))

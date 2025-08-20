@@ -25,13 +25,13 @@ struct LoginView: View {
                     .frame(width: 40)
                     .padding(.bottom, .screenWidth * 0.1)
                 
-                Text("Loging")
+                Text("Logging In")
                     .font(.customFont(.gilroySemibold, fontSize: 26))
                     .foregroundStyle(Color.primaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 4)
                 
-                Text("Enter your emails and password")
+                Text("Enter your email and password")
                     .font(.customFont(.gilroySemibold, fontSize: 16))
                     .foregroundStyle(Color.secondaryText)
                     .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -73,14 +73,14 @@ struct LoginView: View {
                 
                 
                 NavigationLink {
-                    //
+                    SignUpView()
                 } label: {
                     HStack{
                         Text("Don’t have an account?")
                             .font(.customFont(.gilroySemibold, fontSize: 14))
                             .foregroundStyle(Color.primaryText)
                         
-                        Text("Signup")
+                        Text("Sign Up")
                             .font(.customFont(.gilroySemibold, fontSize: 14))
                             .foregroundStyle(Color.primaryApp)
                     }
