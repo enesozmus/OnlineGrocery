@@ -22,6 +22,13 @@ class MainViewModel: ObservableObject {
     @Published var userObj: UserModel = UserModel(dict: [:])
     
     init() {
+        if(Utils.UDValueBool(key: Globs.userLogin)) {
+            // User Login
+            self.setUserData(uDict: Utils.UDValue(key: Globs.userPayload) as? NSDictionary ?? [:] )
+        } else {
+            // User Not Login
+        }
+        
 #if DEBUG
         txtUsername = "user4"
         txtEmail = "test@gmail.com"
@@ -92,7 +99,7 @@ class MainViewModel: ObservableObject {
                     if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                         self.setUserData(uDict: response.value(forKey: KKey.payload) as? NSDictionary ?? [:])
                         print(response)
-                    }else{
+                    } else {
                         self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                         self.showError = true
                     }
