@@ -10,8 +10,8 @@ import Foundation
 class HomeViewModel: ObservableObject {
     static var shared: HomeViewModel = HomeViewModel()
     
-    @Published var selectTab: Int = 0
-    //    @Published var txtSearch: String = ""
+    @Published var selectTab = 0
+    @Published var txtSearch = ""
     
     
     //    @Published var showError = false

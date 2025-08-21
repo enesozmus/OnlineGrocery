@@ -10,6 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     
     @StateObject var homeVM = HomeViewModel.shared
+    
     var body: some View {
         ZStack{
             
