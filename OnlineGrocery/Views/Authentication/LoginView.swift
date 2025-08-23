@@ -10,8 +10,10 @@ import SwiftUI
 struct LoginView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var loginVM = MainViewModel.shared
+    //    @State private var path = NavigationPath()
     
     var body: some View {
+        //        NavigationStack(path: $path) {
         ZStack {
             Image("bottom_bg")
                 .resizable()
@@ -68,9 +70,12 @@ struct LoginView: View {
                 
                 RoundButton(title: "Log In") {
                     loginVM.serviceCallLogin()
+                    
+                    //                        if(loginVM.isUserLogin) {
+                    //                            path.append("main_tab_view_destination")
+                    //                        }
                 }
                 .padding(.bottom, .screenWidth * 0.05)
-                
                 
                 NavigationLink {
                     SignUpView()
@@ -111,6 +116,12 @@ struct LoginView: View {
             .padding(.top, .topInsets)
             .padding(.horizontal, 20)
         }
+        //        }
+        //        .navigationDestination(for: String.self) { value in
+        //            if value == "main_tab_view_destination" {
+        //                MainTabView()
+        //            }
+        //        }
         .alert(isPresented: $loginVM.showError) {
             Alert(title: Text(Globs.AppName), message: Text( loginVM.errorMessage ), dismissButton: .default(Text("Ok")))
         }

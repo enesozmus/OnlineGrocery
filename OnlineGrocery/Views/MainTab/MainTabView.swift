@@ -15,7 +15,7 @@ struct MainTabView: View {
         ZStack{
             
             if(homeVM.selectTab == 0) {
-                //HomeView()
+                HomeView()
             } else if(homeVM.selectTab == 1) {
                 //ExploreView()
             } else if(homeVM.selectTab == 2) {

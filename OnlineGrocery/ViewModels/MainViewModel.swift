@@ -58,7 +58,6 @@ class MainViewModel: ObservableObject {
                 if let response = responseObj as? NSDictionary {
                     if response.value(forKey: KKey.status) as? String ?? "" == "1" {
                         self.setUserData(uDict: response.value(forKey: KKey.payload) as? NSDictionary ?? [:])
-                        print(response)
                     } else {
                         self.errorMessage = response.value(forKey: KKey.message) as? String ?? "Fail"
                         self.showError = true
@@ -108,6 +107,12 @@ class MainViewModel: ObservableObject {
                 self.errorMessage = error?.localizedDescription ?? "Fail"
                 self.showError = true
             }
+    }
+    
+    //MARK: Log Out
+    func logout() {
+        Utils.UDSET(data: false, key: Globs.userLogin)
+        isUserLogin = false
     }
     
     //MARK: SetUserData

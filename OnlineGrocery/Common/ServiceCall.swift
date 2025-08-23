@@ -13,10 +13,9 @@ class ServiceCall {
         parameter: NSDictionary,
         path: String,
         isToken: Bool = false,
-        withSuccess: @escaping ( (_ responseObj: AnyObject?) ->()),
-        failure: @escaping ( (_ error: Error?) ->() )
-    ) {
-        
+        withSuccess: @escaping ( (_ responseObj: AnyObject?) ->() ),
+        failure: @escaping ( (_ error: Error?) ->() ) )
+    {
         DispatchQueue.global(qos: .userInitiated).async {
             let parameterData = NSMutableData()
             let dictKey = parameter.allKeys as! [String]
@@ -37,7 +36,7 @@ class ServiceCall {
             request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             
             if(isToken) {
-                //request.addValue( MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")
+                request.addValue(MainViewModel.shared.userObj.authToken , forHTTPHeaderField: "access_token")
             }
             request.httpMethod = "POST"
             request.httpBody = parameterData as Data

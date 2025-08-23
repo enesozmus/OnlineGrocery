@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		DF6678CE2E578050004E0141 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = DF6678CD2E578050004E0141 /* SDWebImageSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		DFCBEECB2E50D61A00877E54 /* OnlineGrocery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineGrocery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE4FD572E5104D7005A6C0F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF6678CE2E578050004E0141 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,7 @@
 			);
 			name = OnlineGrocery;
 			packageProductDependencies = (
+				DF6678CD2E578050004E0141 /* SDWebImageSwiftUI */,
 			);
 			productName = OnlineGrocery;
 			productReference = DFCBEECB2E50D61A00877E54 /* OnlineGrocery.app */;
@@ -109,6 +115,9 @@
 			);
 			mainGroup = DFCBEEC22E50D61A00877E54;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				DF6678CC2E57804F004E0141 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = DFCBEECC2E50D61A00877E54 /* Products */;
 			projectDirPath = "";
@@ -347,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DF6678CC2E57804F004E0141 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DF6678CD2E578050004E0141 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF6678CC2E57804F004E0141 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DFCBEEC32E50D61A00877E54 /* Project object */;
 }
