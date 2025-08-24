@@ -10,6 +10,7 @@ import SwiftUI
 struct MainTabView: View {
     
     @StateObject var homeVM = HomeViewModel.shared
+    @StateObject var mainVM = MainViewModel.shared
     
     var body: some View {
         ZStack{
@@ -21,9 +22,17 @@ struct MainTabView: View {
             } else if(homeVM.selectTab == 2) {
                 //MyCartView()
             } else if(homeVM.selectTab == 3) {
-                //FavouriteView()
+                FavouriteView()
             } else if(homeVM.selectTab == 4) {
                 //AccountView()
+                Button {
+                    mainVM.logout()
+                } label: {
+                    Text("Log Out")
+                        .font(.largeTitle)
+                }
+                .background(Color.red)
+                .foregroundStyle(.white)
             }
             
             VStack{

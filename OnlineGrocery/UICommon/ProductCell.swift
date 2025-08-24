@@ -15,7 +15,7 @@ struct ProductCell: View {
     
     var body: some View {
         NavigationLink {
-            //ProductDetailView(detailVM:  ProductDetailViewModel(prodObj: pObj) )
+            ProductDetailView(detailVM:  ProductDetailViewModel(prodObj: pObj) )
         } label: {
             VStack{
                 
@@ -91,7 +91,6 @@ struct ProductCell: View {
         "image": "https://p7.hiclipart.com/preview/332/204/967/banana-clip-art-banana-picture.jpg",
         "cat_name": "Frash Fruits & Vegetable",
         "type_name": "Pulses",
-        "is_fav": 1
-    ])) {
+        "is_fav": 1])) {
     }
 }

@@ -16,7 +16,7 @@ struct ProductDetailView: View {
     private var totalPrice: Double {
         (detailVM.pObj.offerPrice ?? detailVM.pObj.price) * Double(detailVM.qty)
     }
-        
+    
     //MARK: - Body
     var body: some View {
         ZStack {
@@ -125,16 +125,16 @@ struct ProductDetailView: View {
                 }
                 .padding(.horizontal, 20)
                 
-                //                RoundButton(title: "Add To Basket") {
-                //                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty) { isDone, msg  in
-                //
-                //                        detailVM.qty = 1
-                //
-                //                        self.detailVM.errorMessage = msg
-                //                        self.detailVM.showError = true
-                //                    }
-                //                }
-                //                .padding( 20)
+                RoundButton(title: "Add To Basket") {
+                    //                    CartViewModel.serviceCallAddToCart(prodId: detailVM.pObj.prodId, qty: detailVM.qty) { isDone, msg  in
+                    //
+                    //                        detailVM.qty = 1
+                    //
+                    //                        self.detailVM.errorMessage = msg
+                    //                        self.detailVM.showError = true
+                    //                    }
+                }
+                .padding( 20)
             }
             
             VStack {
@@ -230,7 +230,7 @@ struct ProductDetailView: View {
         }
         .padding(.horizontal, 20)
     }
-
+    
     var nutritionsSection: some View {
         VStack {
             HStack {
