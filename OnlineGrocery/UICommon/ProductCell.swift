@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProductCell: View {
     @State var pObj: ProductModel = ProductModel(dict: [:])
-    @State var width:Double = 180.0
+    @State var width = 180.0
     var didAddCart: ( ()->() )?
     
     var body: some View {

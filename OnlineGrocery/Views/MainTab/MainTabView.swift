@@ -18,7 +18,7 @@ struct MainTabView: View {
             if(homeVM.selectTab == 0) {
                 HomeView()
             } else if(homeVM.selectTab == 1) {
-                //ExploreView()
+                ExploreView()
             } else if(homeVM.selectTab == 2) {
                 //MyCartView()
             } else if(homeVM.selectTab == 3) {
