@@ -24,16 +24,7 @@ struct MainTabView: View {
             } else if(homeVM.selectTab == 3) {
                 FavouriteView()
             } else if(homeVM.selectTab == 4) {
-                //AccountView()
-                Button {
-                    mainVM.logout()
-                } label: {
-                    Text("Log Out")
-                        .font(.largeTitle)
-                }
-                .frame(width: 200, height: 50)
-                .background(Color.red)
-                .foregroundStyle(.white)
+                AccountView()
             }
             
             VStack{
