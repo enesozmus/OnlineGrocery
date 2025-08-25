@@ -47,25 +47,25 @@ struct HomeView: View {
                     .frame(height: 115)
                     .padding(.horizontal, 20)
                 
-                //                SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
-                //                    //
-                //                }
-                //                .padding(.horizontal, 20)
-                //
-                //                ScrollView(.horizontal, showsIndicators: false ) {
-                //                    LazyHStack(spacing: 15) {
-                //                        ForEach(homeVM.offerArr, id: \.id) { pObj in
-                //                            ProductCell(pObj: pObj, didAddCart: {
-                //                                //CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
-                //                                //    self.homeVM.errorMessage = msg
-                //                                //    self.homeVM.showError = true
-                //                                //}
-                //                            })
-                //                        }
-                //                    }
-                //                    .padding(.horizontal, 20)
-                //                    .padding(.vertical, 4)
-                //                }
+                SectionTitleAll(title: "Exclusive offer", titleAll: "See All") {
+                    //
+                }
+                .padding(.horizontal, 20)
+                
+                ScrollView(.horizontal, showsIndicators: false ) {
+                    LazyHStack(spacing: 15) {
+                        ForEach(homeVM.offerArr, id: \.id) { pObj in
+                            ProductCell(pObj: pObj, didAddCart: {
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+                                    self.homeVM.errorMessage = msg
+                                    self.homeVM.showError = true
+                                }
+                            })
+                        }
+                    }
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 4)
+                }
                 
                 SectionTitleAll(title: "Best Selling", titleAll: "See All") {
                     //
@@ -74,12 +74,12 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
-                        ForEach (homeVM.bestArr, id: \.id) { pObj in
+                        ForEach(homeVM.bestArr, id: \.id) { pObj in
                             ProductCell(pObj: pObj, didAddCart: {
-                                //                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
-                                //                                    self.homeVM.errorMessage = msg
-                                //                                    self.homeVM.showError = true
-                                //                                }
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+                                    self.homeVM.errorMessage = msg
+                                    self.homeVM.showError = true
+                                }
                             })
                         }
                     }
@@ -106,13 +106,12 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false ) {
                     LazyHStack(spacing: 15) {
-                        ForEach (homeVM.listArr, id: \.id) { pObj in
+                        ForEach(homeVM.listArr, id: \.id) { pObj in
                             ProductCell(pObj: pObj, didAddCart: {
-                                //                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
-                                //
-                                //                                    self.homeVM.errorMessage = msg
-                                //                                    self.homeVM.showError = true
-                                //                                }
+                                CartViewModel.serviceCallAddToCart(prodId: pObj.prodId, qty: 1) { isDone, msg in
+                                    self.homeVM.errorMessage = msg
+                                    self.homeVM.showError = true
+                                }
                             })
                         }
                     }
@@ -120,12 +119,15 @@ struct HomeView: View {
                     .padding(.vertical, 4)
                 }
                 .padding(.bottom, .bottomInsets + 60)
-                
             }
         }
-        //        .alert(isPresented: $homeVM.showError, content: {
-        //            Alert(title: Text(Globs.AppName), message: Text(homeVM.errorMessage), dismissButton: .default(Text("OK")) )
-        //        })
+        .alert(isPresented: $homeVM.showError, content: {
+            Alert(
+                title: Text(Globs.AppName),
+                message: Text(homeVM.errorMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        })
         .ignoresSafeArea()
     }
 }
