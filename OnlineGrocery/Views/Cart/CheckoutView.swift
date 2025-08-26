@@ -81,9 +81,9 @@ extension CheckoutView {
             
             if cartVM.deliveryType == 1 {
                 NavigationLink {
-                    //                    DelieryAddressView(isPicker: true, didSelect: { aObj in
-                    //                        cartVM.deliverObj = aObj
-                    //                    })
+                    DeliveryAddressView(isPicker: true, didSelect: { aObj in
+                        cartVM.deliverObj = aObj
+                    })
                 } label: {
                     HStack {
                         Text("Delivery")
