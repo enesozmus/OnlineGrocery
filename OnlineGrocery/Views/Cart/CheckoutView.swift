@@ -128,9 +128,9 @@ extension CheckoutView {
             
             if cartVM.paymentType == 2 {
                 NavigationLink {
-                    //                    PaymentMethodsView(isPicker: true, didSelect: { pObj in
-                    //                        cartVM.paymentObj = pObj
-                    //                    })
+                    PaymentMethodsView(isPicker: true, didSelect: { pObj in
+                        cartVM.paymentObj = pObj
+                    })
                 } label: {
                     HStack {
                         Text("Payment")
