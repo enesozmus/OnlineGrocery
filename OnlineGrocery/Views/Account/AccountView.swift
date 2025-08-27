@@ -67,9 +67,9 @@ struct AccountView: View {
                                 AccountRow(title: "Payment Methods", icon: "paymenth_methods")
                             }
                             NavigationLink {
-                                //PromoCodeView()
+                                PromoCodeView()
                             } label: {
-                                AccountRow(title: "Promo Code", icon: "a_promocode")
+                                AccountRow(title: "Promo Codes", icon: "a_promocode")
                             }
                         }
                         

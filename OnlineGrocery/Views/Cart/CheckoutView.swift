@@ -161,9 +161,9 @@ extension CheckoutView {
             }
             
             NavigationLink {
-                //                PromoCodeView(isPicker: true, didSelect: { pObj in
-                //                    cartVM.promoObj = pObj
-                //                })
+                PromoCodeView(isPicker: true, didSelect: { pObj in
+                    cartVM.promoObj = pObj
+                })
             } label: {
                 HStack {
                     Text("Promo Code")
