@@ -44,7 +44,7 @@ struct AccountView: View {
                     LazyVStack {
                         VStack{
                             NavigationLink {
-                                //MyOrdersView()
+                                MyOrdersView()
                             } label: {
                                 AccountRow(title: "My Orders", icon: "a_order")
                             }
@@ -66,6 +66,7 @@ struct AccountView: View {
                             } label: {
                                 AccountRow(title: "Payment Methods", icon: "paymenth_methods")
                             }
+                            
                             NavigationLink {
                                 PromoCodeView()
                             } label: {
@@ -95,6 +96,7 @@ struct AccountView: View {
                                 
                                 HStack{
                                     Spacer()
+                                    
                                     Image("logout")
                                         .resizable()
                                         .scaledToFit()
@@ -102,7 +104,6 @@ struct AccountView: View {
                                         .padding(.trailing, 20)
                                 }
                             }
-                            
                         }
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
                         .background(Color(hex: "F2F3F2"))

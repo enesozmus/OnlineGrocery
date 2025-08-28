@@ -94,13 +94,15 @@ struct MyCartView: View {
         .onAppear{
             cartVM.serviceCallList()
         }
-        .background(
-//            NavigationLink(destination: OrderAccpetView(), isActive: $cartVM.showOrderAccept , label: {
-//                EmptyView()
-//            })
-        )
+        .navigationDestination(isPresented: $cartVM.showOrderAccept) {
+            OrderAccpetView()
+        }
         .alert(isPresented: $cartVM.showError, content: {
-            Alert(title: Text(Globs.AppName), message: Text(cartVM.errorMessage), dismissButton: .default(Text("OK")) )
+            Alert(
+                title: Text(Globs.AppName),
+                message: Text(cartVM.errorMessage),
+                dismissButton: .default(Text("OK"))
+            )
         })
         .animation(.easeInOut, value: cartVM.showCheckout)
         .ignoresSafeArea()
