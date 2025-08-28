@@ -76,7 +76,7 @@ struct AccountView: View {
                         
                         VStack {
                             NavigationLink {
-                                //NotificationView()
+                                NotificationView()
                             } label: {
                                 AccountRow(title: "Notifications", icon: "a_noitification")
                             }
